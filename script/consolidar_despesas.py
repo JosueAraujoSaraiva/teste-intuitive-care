@@ -23,11 +23,11 @@ def main():
 
     pasta_output.mkdir(parents=True, exist_ok=True)
 
-    # Coleta de arquivos seguindo o padrão clean_*.csv
+    # Coleta de arquivos seguindo o padrão padronizado_*.csv
     arquivos = list(pasta_processed.glob("padronizado*.csv"))
 
     if not arquivos:
-        logging.error("Nenhum arquivo 'clean_*.csv' encontrado para processar.")
+        logging.error("Nenhum arquivo 'padronizado_*.csv' encontrado para processar.")
         return
 
     lista_dataframes = []
@@ -98,14 +98,14 @@ def main():
     caminho_csv = pasta_output / "consolidado_despesas.csv"
     df_consolidado.to_csv(caminho_csv, index=False, encoding="utf-8")
     
-    logging.info(f"✅ CSV gerado em: {caminho_csv}")
+    logging.info(f"CSV gerado em: {caminho_csv}")
 
     # Compactação para economia de espaço/transferência
     caminho_zip = pasta_output / "consolidado_despesas.zip"
     with zipfile.ZipFile(caminho_zip, "w", zipfile.ZIP_DEFLATED) as zipf:
         zipf.write(caminho_csv, arcname="consolidado_despesas.csv")
 
-    logging.info(f"📦 ZIP concluído: {caminho_zip.name}")
+    logging.info(f"ZIP concluído: {caminho_zip.name}")
 
 if __name__ == "__main__":
     main()

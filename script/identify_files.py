@@ -130,7 +130,7 @@ def main():
                     on_bad_lines="skip"
                 )
 
-            # 🔹 FILTRO EFETIVO DAS LINHAS DE DESPESA
+            # FILTRO EFETIVO DAS LINHAS DE DESPESA
             df = df[df.apply(lambda row: linha_contem_despesa(row, termo_busca), axis=1)]
 
             if df.empty:
@@ -155,7 +155,7 @@ def main():
             logging.info(f"   ↳ Transformado e salvo em: {destino.name}")
 
         except Exception as e:
-            logging.error(f"❌ Erro crítico ao transformar {arquivo.name}: {e}")
+            logging.error(f"Erro crítico ao transformar {arquivo.name}: {e}")
             shutil.copy2(arquivo, pasta_processed / arquivo.name)
 
     logging.info("PROCESSAMENTO FINALIZADO")
