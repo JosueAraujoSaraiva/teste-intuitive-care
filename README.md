@@ -1,3 +1,4 @@
+
 # README — Teste Intuitive Care
 
 **Projeto:** teste-intuitive-care  
