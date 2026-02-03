@@ -23,7 +23,7 @@ def main():
     # 1. Cria tabelas e limpa staging
     execute_sql_file("create_tables.sql")
     
-    # 2. Carga via COPY (Alta performance para grandes volumes)
+    # 2. Carga via COPY 
     for table, (path, delim, enc) in CSV_MAP.items():
         copy_sql = f"COPY {table} FROM STDIN WITH (FORMAT csv, HEADER true, DELIMITER '{delim}')"
         with get_connection() as conn:

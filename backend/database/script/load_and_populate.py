@@ -220,7 +220,7 @@ def main():
             cur.execute(POPULATE_SQL)
         conn.commit()
 
-    # 4) Mostrar contagens
+
     print("\nContagens após carga:")
     for row in fetch_counts():
         print(row)

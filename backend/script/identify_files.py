@@ -21,10 +21,7 @@ def normalizar_texto(texto: str) -> str:
     return texto.strip()
 
 def converter_valor_numerico(valor):
-    """
-    Converte formato brasileiro '1.500,00' para float 1500.00.
-    Retorna 0.0 se for inválido.
-    """
+   
     if pd.isna(valor) or str(valor).strip() == "":
         return 0.0
     try:

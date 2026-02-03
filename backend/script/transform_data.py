@@ -71,7 +71,6 @@ def baixar_e_salvar_cadastro(caminho_saida: Path):
         
         conteudo = baixar_arquivo(url_final)
         
-        # Salvando o arquivo físico para o teste de SQL (Item 3)
         caminho_saida.parent.mkdir(parents=True, exist_ok=True)
         with open(caminho_saida, "wb") as f:
             f.write(conteudo)
