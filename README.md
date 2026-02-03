@@ -11,7 +11,8 @@ Este repositório contém minha solução para o **Teste de Estágio** da **Intu
 
 Busquei resolver o desafio de forma **pragmática**, justificando **trade-offs técnicos** e organizando um fluxo **executável de ponta a ponta**, do download de dados à interface web.
 
-> **Nota:** Para entregar a melhor solução possível, adquiri um curso na Udemy e estudei por 2 dias as tecnologias envolvidas (Python, FastAPI, Vue 3, SQL e processamento de dados).
+> **Nota:** Para entregar a melhor solução possível, adquiri um curso na Udemy e estudei por 2 dias as tecnologias envolvidas (Python, FastAPI, Vue 3, SQL e processamento de dados) e
+> o arquivo .env versionado no repositório contém valores fictícios, incluídos apenas como exemplo de configuração, seguindo boas práticas de segurança..
 
 ---
 
