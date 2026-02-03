@@ -121,7 +121,7 @@ Escolhi **processamento incremental por arquivo**, porque os dados da ANS podem 
 - **Framework:** FastAPI  
   *Motivo:* rapidez na implementação, validação automática via Pydantic, documentação integrada.
 - **Paginação:** Offset-based (`page`, `limit`)  
-  *Motivo:* simples de implementar e adequado para o volume esperado.
+  *Motivo:* Escolhi a paginação no servidor para garantir que a interface permaneça fluida mesmo que a base de dados cresça para milhares de operadoras, evitando o download excessivo de JSON no cliente.
 - **Cache de estatísticas:** cache em memória por 5 minutos  
   *Motivo:* evita recalcular dados agregados com frequência.
 - **Resposta da API:** dados + metadados  
