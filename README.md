@@ -203,6 +203,18 @@ DB_PASSWORD=sua_senha
 
 ```bash
 cd backend/database/script
+python test_db.py
+
+cd backend/database/script
+python connection.py
+
+cd backend/database/script
+python run_sql.py
+
+cd backend/database/script
+python load_and_populate.py
+
+cd backend/database/script
 python load_staging_and_run.py
 ```
 
