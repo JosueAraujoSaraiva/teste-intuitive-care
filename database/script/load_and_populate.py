@@ -6,12 +6,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 
 
 def find_project_root(start: Path) -> Path:
-    """
-    Sobe diretórios até encontrar um diretório que contenha:
-    - pasta 'data'
-    - arquivo 'README.md'
-    Isso torna o script robusto independente de estar em /dataBase/scripts.
-    """
+    
     p = start.resolve()
     for parent in [p] + list(p.parents):
         if (parent / "data").exists() and (parent / "README.md").exists():
