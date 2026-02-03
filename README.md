@@ -148,6 +148,10 @@ Escolhi **processamento incremental por arquivo**, porque os dados da ANS podem 
 
 > **Importante:** abaixo está um passo a passo **bem detalhado**, para que consiga rodar tudo do zero.
 
+Clonar repositorio no terminal do seu vsCode:
+git clone https://github.com/USUARIO/NOME-DO-REPOSITORIO.git
+
+### Criar ambiente virtual do Python
 ### 0) (Opcional) Criar ambiente virtual do Python
 
 Recomendado para isolar as dependências:
